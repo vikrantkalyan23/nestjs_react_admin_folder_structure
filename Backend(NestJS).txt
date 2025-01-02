@@ -1,0 +1,52 @@
+src/
+├── auth/
+│   ├── auth.controller.ts
+│   ├── auth.service.ts
+│   ├── auth.module.ts
+│   ├── strategies/
+│   │   ├── jwt.strategy.ts
+│   │   ├── local.strategy.ts
+│   ├── dto/
+│   │   ├── login.dto.ts
+│   │   ├── register.dto.ts
+├── users/
+│   ├── users.controller.ts
+│   ├── users.service.ts
+│   ├── users.module.ts
+│   ├── schemas/
+│   │   ├── user.schema.ts
+│   ├── dto/
+│       ├── create-user.dto.ts
+│       ├── update-user.dto.ts
+├── common/
+│   ├── decorators/
+│   │   ├── roles.decorator.ts
+│   │   ├── public.decorator.ts
+│   ├── guards/
+│   │   ├── jwt-auth.guard.ts
+│   │   ├── roles.guard.ts
+│   ├── interceptors/
+│   │   ├── logging.interceptor.ts
+│   ├── utils/
+│       ├── helpers.ts
+├── config/
+│   ├── app.config.ts
+│   ├── database.config.ts
+├── app.module.ts
+├── main.ts
+
+
+
+Key Components
+
+    Feature Modules:
+        Each module (e.g., auth, users) should encapsulate specific business logic.
+    Common Module:
+        Reusable components like decorators, guards, interceptors, and utilities.
+    Config Folder:
+        Centralize configurations for the app, including environment variables.
+    DTOs:
+        For defining data validation and transfer objects.
+    Schemas:
+        MongoDB schemas for Mongoose.
+

@@ -1,0 +1,52 @@
+src/
+├── components/
+│   ├── auth/
+│   │   ├── LoginForm.jsx
+│   │   ├── RegisterForm.jsx
+│   ├── dashboard/
+│       ├── Sidebar.jsx
+│       ├── Navbar.jsx
+│       ├── AdminTable.jsx
+├── pages/
+│   ├── AuthPage.jsx
+│   ├── DashboardPage.jsx
+│   ├── NotFoundPage.jsx
+├── context/
+│   ├── AuthContext.jsx
+│   ├── ThemeContext.jsx
+├── services/
+│   ├── authService.js
+│   ├── userService.js
+├── utils/
+│   ├── apiClient.js
+│   ├── helpers.js
+├── hooks/
+│   ├── useAuth.js
+│   ├── useFetch.js
+├── routes/
+│   ├── PrivateRoute.jsx
+│   ├── AppRoutes.jsx
+├── styles/
+│   ├── globals.css
+│   ├── components.css
+├── App.jsx
+├── index.jsx
+
+
+Key Components
+
+    Components Folder:
+        Split into smaller subfolders (e.g., auth, dashboard) for each major UI component.
+    Pages Folder:
+        High-level views representing different pages in the app.
+    Context Folder:
+        For managing global state like authentication and theme.
+    Services Folder:
+        Centralize all API calls.
+    Utils Folder:
+        Utility functions like helper methods and API clients.
+    Hooks Folder:
+        Custom React hooks for reusable logic.
+    Routes Folder:
+        Handle routing and protected routes using react-router-dom.
+

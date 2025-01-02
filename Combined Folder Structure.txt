@@ -1,0 +1,65 @@
+project-root/
+├── backend/
+│   ├── src/
+│   │   ├── auth/
+│   │   │   ├── auth.controller.ts
+│   │   │   ├── auth.service.ts
+│   │   │   ├── auth.module.ts
+│   │   │   ├── strategies/
+│   │   │   │   ├── jwt.strategy.ts
+│   │   │   │   ├── local.strategy.ts
+│   │   │   ├── dto/
+│   │   │       ├── login.dto.ts
+│   │   │       ├── register.dto.ts
+│   │   ├── users/
+│   │   ├── common/
+│   │   ├── config/
+│   │   ├── app.module.ts
+│   │   ├── main.ts
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── .env
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── auth/
+│   │   │   │   ├── LoginForm.jsx
+│   │   │   │   ├── RegisterForm.jsx
+│   │   │   ├── dashboard/
+│   │   │       ├── Sidebar.jsx
+│   │   │       ├── Navbar.jsx
+│   │   ├── pages/
+│   │   │   ├── AuthPage.jsx
+│   │   │   ├── DashboardPage.jsx
+│   │   ├── context/
+│   │   ├── services/
+│   │   ├── utils/
+│   │   ├── hooks/
+│   │   ├── routes/
+│   │   ├── styles/
+│   │   ├── App.jsx
+│   │   ├── index.jsx
+│   ├── package.json
+│   ├── .env
+├── shared/
+│   ├── types/
+│   │   ├── user.ts
+│   ├── constants/
+│       ├── api-endpoints.ts
+├── package.json
+├── README.md
+
+
+Key Points
+
+    Separation of Concerns:
+        Keep backend/ and frontend/ in their respective directories.
+        Use a shared folder (shared/) for reusable types, constants, and interfaces.
+
+    Single Package Manager:
+        Use a single package.json in the root if you want to manage all dependencies together, or keep separate package.json files in backend/ and frontend/.
+
+    Build and Deployment:
+        Build the React app and serve it via the NestJS backend:
+            After building React, copy the output (frontend/build) to backend/public/ or similar.
